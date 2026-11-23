@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kinastech - Your Digital Partner Solution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#4cc98a;--b:#3b5bd9;--grad:linear-gradient(135deg,#4cc98a 0%,#3b5bd9 100%);--bg:#f7f9fc;--card:#fff;--text:#1b2433;--muted:#64708a;--line:#e3e8f1;--danger:#dc2626}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#131c2e;--text:#e8edf7;--muted:#9aa6bf;--line:#26324a}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#131c2e;--text:#e8edf7;--muted:#9aa6bf;--line:#26324a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px}
+.brand img{height:44px;width:auto}
+.links{display:flex;gap:18px;margin-left:auto;font-size:14px;font-weight:600}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.hero{padding:44px 0 20px;text-align:center}
+h1{font-size:clamp(30px,5.5vw,52px);line-height:1.1;margin:0 0 10px;font-weight:800}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:17px;max-width:640px;margin:0 auto 18px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 18px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font:inherit;font-weight:600;text-decoration:none}
+.btn.primary{background:var(--grad);color:#fff;border:none}
+.btn.wa{background:#25d366;color:#fff;border:none}
+.btn.small{padding:6px 12px;font-size:13px}
+.btn.danger{color:var(--danger)}
+.btn.ghost{background:none}
+section{padding:56px 0}
+section h2{font-size:28px;margin:0 0 6px;font-weight:800}
+.sub{color:var(--muted);margin:0 0 26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.group-title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--b);margin:28px 0 12px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.svc{display:flex;flex-direction:column;gap:8px}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:21px}
+.svc h3{margin:0;font-size:17px}
+.svc p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.form{display:grid;gap:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input,select,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+textarea{min-height:90px;resize:vertical}
+label{font-size:14px;font-weight:600}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.ok-box{display:none;margin-top:14px;padding:16px;border-radius:12px;background:rgba(76,201,138,.12);border:1px solid var(--g)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:28px}
+.tc{display:flex;flex-direction:column;gap:8px}
+.tc p{margin:0;font-style:italic}
+.stars{color:#f59e0b;letter-spacing:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+/* edukasi */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:12px}
+details summary{cursor:pointer;font-weight:700;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"＋ ";color:var(--b)}
+details[open] summary::before{content:"－ "}
+details p,details li{color:var(--muted);font-size:15px}
+details ul{margin:8px 0 0;padding-left:20px}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+/* game */
+.game-box{max-width:920px;margin:0 auto}
+.edu-bar{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-size:14px;font-weight:600}
+.edu-track{flex:1;height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+.edu-fill{height:100%;width:0;background:var(--grad);transition:width .4s}
+.game-wrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(20,30,60,.08);touch-action:none;user-select:none}
+#game{display:block;width:100%;cursor:pointer}
+.controls{display:flex;gap:8px;justify-content:center;margin:12px 0 0}
+.controls button{width:60px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:18px;cursor:pointer}
+.hint{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
+.modal{display:none;position:fixed;inset:0;background:rgba(10,15,30,.55);z-index:30;align-items:center;justify-content:center;padding:18px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;max-width:440px;width:100%;max-height:90vh;overflow:auto;display:grid;gap:12px}
+.mhead{display:flex;align-items:center;gap:12px}
+.mhead .ic{width:52px;height:52px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:26px}
+.tip{background:rgba(76,201,138,.1);border:1px solid rgba(76,201,138,.4);border-radius:12px;padding:12px;font-size:14px}
+.quiz-q{font-weight:700}
+.quiz-opts{display:grid;gap:8px}
+.quiz-opts button{padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);text-align:left;cursor:pointer;font:inherit}
+.quiz-opts button.right{border-color:var(--g);background:rgba(76,201,138,.18)}
+.quiz-opts button.wrong{border-color:var(--danger)}
+.svc-pick{display:grid;gap:8px}
+/* admin */
+#admin{display:none;padding-top:30px}
+body.show-admin #admin{display:block}
+body.show-admin #mainpage{display:none}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+select.st{width:auto;padding:6px}
+.t-danger{color:var(--danger)}
+#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 16px;border-radius:10px;z-index:40;max-width:90%}
+.promo{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.promo>div{background:var(--grad);color:#fff;border-radius:14px;padding:14px;font-size:15px}
+.promo span{opacity:.92;font-size:13px}
+.cat-tools{display:grid;gap:10px;margin-bottom:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font:inherit;font-size:14px}
+.chip.on{background:var(--grad);color:#fff;border-color:transparent}
+.cat-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px}
+.ugrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.ucard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:transform .2s,box-shadow .2s}
+.ucard:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(20,30,60,.1)}
+.ucard h3{margin:0;font-size:16px;line-height:1.3}
+.uhead{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.ubrand{font-size:11px;font-weight:800;letter-spacing:.08em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.utag{font-size:11px;padding:2px 8px;border-radius:99px;background:var(--line)}
+.uspec{display:flex;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--muted)}
+.uprice{font-size:20px;font-weight:800;color:var(--b)}
+.urec{display:flex;flex-wrap:wrap;gap:6px}
+.rbadge{font-size:12px;padding:3px 9px;border-radius:99px;background:rgba(59,91,217,.12);color:var(--b);font-weight:600}
+.ureason{margin:0;font-size:13px;color:var(--muted)}
+.ubtns{display:flex;gap:8px;margin-top:auto;flex-wrap:wrap}
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.guide .card h3{margin:0 0 6px;font-size:17px}
+.guide p{margin:0;color:var(--muted);font-size:14px}
+.guide .card{display:grid;gap:4px}
+footer{border-top:1px solid var(--line);padding:30px 0;margin-top:20px;background:var(--card)}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+@media (max-width:720px){.links{display:none}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img data-mascot alt="Maskot Kinastech"><span>Kinastech</span></a>
+    <div class="links">
+      <a href="#main">Main</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#katalog">Katalog</a>
+      <a href="#edukasi">Edukasi</a>
+      <a href="#pesan">Pesan</a>
+      <a href="#testimoni">Testimoni</a>
+    </div>
+    <button class="btn small" id="musicBtn" aria-label="Musik latar" title="Musik latar Kinas Loop" style="margin-left:auto">🎵</button>
+    <button class="btn small" id="sfxBtn" aria-label="Efek suara">🔇</button>
+    <a class="btn wa small" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</nav>
+
+<div id="mainpage">
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1><span class="grad-text">Kinastech</span><br><span class="grad-text">Your Digital Partner Solution</span></h1>
+    <p class="lead">Laptop second, service perangkat, jasa dokumen, desain, dan web development. Mainkan maskot ke papan layanan untuk memilih, sambil belajar tips digital yang berguna.</p>
+  </div>
+</header>
+
+<section id="main" style="padding-top:10px">
+  <div class="wrap game-box">
+    <div class="edu-bar"><span>Edukasi terkumpul</span><div class="edu-track"><div class="edu-fill" id="eduFill"></div></div><span id="eduTxt">0/4</span></div>
+    <div class="game-wrap" id="gameWrap"><canvas id="game" aria-label="Game pemilihan layanan"></canvas></div>
+    <div class="controls">
+      <button id="bL" aria-label="Kiri">◀</button>
+      <button id="bJ" aria-label="Lompat">⤒</button>
+      <button id="bR" aria-label="Kanan">▶</button>
+    </div>
+    <p class="hint">← → untuk jalan, ↑ / Spasi untuk lompat, atau ketuk area game. Jalan ke papan untuk belajar sebentar lalu pilih layanan.</p>
+    <div class="cta"><a class="btn primary" href="#pesan">Pesan Sekarang</a><a class="btn" href="#layanan">Lihat Semua Layanan</a></div>
+  </div>
+</section>
+
+<section id="layanan">
+  <div class="wrap">
+    <h2>Layanan Kami</h2>
+    <p class="sub">Dari laptop sampai dokumen, semua kebutuhan digital dalam satu tempat.</p>
+    <div id="svcList"></div>
+  </div>
+</section>
+
+<section id="katalog">
+  <div class="wrap">
+    <h2>Katalog Laptop Second</h2>
+    <p class="sub">Pricelist Kinastech November 2026. Setiap unit sudah termasuk paket All In One.</p>
+    <div class="promo">
+      <div>🛠️ <b>All In One</b><br><span>Pelayanan lengkap, dari pembelian sampai siap pakai</span></div>
+      <div>🛡️ <b>Garansi 30 hari</b><br><span>Tidak berlaku jika ada kelalaian (human error)</span></div>
+      <div>🎁 <b>Bonus tas &amp; mouse</b><br><span>Untuk setiap unit yang dibeli</span></div>
+      <div>🔋 <b>Baterai 2–3 jam</b><br><span>Tergantung penggunaan. Jika melebihi itu dianggap bonus.</span></div>
+    </div>
+    <div class="cat-tools">
+      <div class="chips">
+        <button class="chip on" data-use="all" onclick="setUse('all')">Semua</button>
+        <button class="chip" data-use="coding" onclick="setUse('coding')">👨‍💻 Coding</button>
+        <button class="chip" data-use="editing" onclick="setUse('editing')">🎬 Editing</button>
+        <button class="chip" data-use="admin" onclick="setUse('admin')">📑 Administrasi / Kuliah</button>
+      </div>
+      <div class="cat-row">
+        <input id="cq" placeholder="Cari merek, tipe, atau processor" oninput="renderCatalog()">
+        <select id="cb" onchange="renderCatalog()"><option value="">Semua merek</option></select>
+        <input id="cmax" type="number" placeholder="Budget maks (Rp)" oninput="renderCatalog()">
+        <select id="cs" onchange="renderCatalog()"><option value="asc">Harga terendah</option><option value="desc">Harga tertinggi</option><option value="ram">RAM terbesar</option></select>
+      </div>
+    </div>
+    <p class="muted small" id="ccount"></p>
+    <div class="ugrid" id="ugrid"></div>
+    <h3 style="margin:36px 0 12px;font-size:22px">Panduan memilih laptop</h3>
+    <div class="guide">
+      <div class="card"><h3>👨‍💻 Coding</h3><p>Pilih RAM 16 GB dan processor i5 atau i7 atau Ryzen 5 ke atas. Cocok untuk IDE, Docker, dan virtual machine.<br><b>Jurusan:</b> Informatika, Sistem Informasi, Teknik.</p></div>
+      <div class="card"><h3>🎬 Editing</h3><p>Pilih RAM 16 GB ke atas, SSD besar, dan GPU dedicated jika memungkinkan. Layar yang akurat warnanya sangat membantu.<br><b>Jurusan:</b> DKV, Multimedia, Arsitektur, Film.</p></div>
+      <div class="card"><h3>📑 Administrasi &amp; Kuliah</h3><p>RAM 8 GB sudah cukup untuk Word, Excel, PowerPoint, browsing, dan kuliah daring. Pilih yang ringan agar memudahkan untuk mobilitas.<br><b>Jurusan:</b> Ekonomi, Hukum, Pendidikan.</p></div>
+    </div>
+    <p class="muted small" style="margin-top:14px">Baterai: estimasi 2–3 jam tergantung penggunaan. Jika melebihi itu dianggap bonus. Harga dan ketersediaan dapat berubah. Tekan tombol 💬 untuk konfirmasi unit langsung ke WhatsApp kami.</p>
+  </div>
+</section>
+
+<section id="edukasi">
+  <div class="wrap" style="max-width:860px">
+    <h2>Belajar Bareng Kinastech</h2>
+    <p class="sub">Tips singkat yang bisa langsung kamu terapkan, gratis.</p>
+    <details>
+      <summary>Kenapa laptop lama terasa lambat, dan apa solusinya?</summary>
+      <p>Salah satu penyebab utamanya adalah hard disk (HDD) yang bekerja mekanis dan jauh lebih lambat dari SSD. Mengganti HDD ke SSD sering membuat laptop lama terasa jauh lebih cepat saat booting dan membuka aplikasi. Menambah RAM juga membantu saat membuka banyak tab atau aplikasi berat sekaligus.</p>
+    </details>
+    <details>
+      <summary>Apa itu aturan backup 3-2-1?</summary>
+      <p>Aturan ini membantu melindungi data penting dari kerusakan atau kehilangan:</p>
+      <ul><li><b>3</b> salinan data</li><li><b>2</b> jenis media penyimpanan berbeda (misalnya laptop dan flash disk)</li><li><b>1</b> salinan disimpan di luar lokasi, misalnya cloud</li></ul>
+    </details>
+    <details>
+      <summary>Kapan sebaiknya instal ulang Windows?</summary>
+      <p>Pertimbangkan instal ulang jika sistem sering error, banyak aplikasi tidak perlu sehingga lambat, atau setelah terkena malware. Sebelum instal ulang, pastikan data penting sudah dicadangkan, dan lakukan instal ulang dengan sumber resmi Microsoft agar aman.</p>
+    </details>
+    <details>
+      <summary>Tanda-tanda keyboard laptop mulai bermasalah</summary>
+      <ul><li>Ada tombol yang tidak merespons atau harus ditekan berkali-kali.</li><li>Huruf muncul ganda atau tidak sesuai ketikan.</li><li>Keyboard terasa lengket karena kotoran atau cairan.</li></ul>
+      <p>Jika muncul gejala ini, segera periksa agar tidak merembet ke bagian lain.</p>
+    </details>
+    <details>
+      <summary>Tips membuat slide presentasi yang rapi</summary>
+      <p>Gunakan aturan 6x6: maksimal 6 poin per slide dan 6 kata per poin. Pilih satu jenis font, gunakan kontras yang jelas, dan beri ruang kosong agar tidak terasa sesak. Gambar dan grafik lebih mudah dipahami daripada paragraf panjang.</p>
+    </details>
+    <details>
+      <summary>Format logo yang tepat untuk dicetak</summary>
+      <p>Untuk stiker dan cetak, gunakan format vektor seperti SVG, AI, atau PDF, karena tetap tajam saat diperbesar. Format PNG atau JPG kecil akan terlihat pecah jika dicetak besar.</p>
+    </details>
+  </div>
+</section>
+
+<section id="pesan" style="padding-top:20px">
+  <div class="wrap" style="max-width:720px">
+    <div class="card">
+      <h2>Pesan Lewat Website</h2>
+      <p class="sub">Isi form, lalu lanjutkan konsultasi langsung via WhatsApp.</p>
+      <form class="form" onsubmit="submitOrder(event)">
+        <div class="two">
+          <div><label>Nama</label><input name="nama" required placeholder="Nama lengkap"></div>
+          <div><label>No. WhatsApp</label><input name="hp" required placeholder="08xxxxxxxxxx" inputmode="tel"></div>
+        </div>
+        <div><label>Layanan</label><select name="layanan" id="selLayanan" required></select></div>
+        <div><label>Detail kebutuhan</label><textarea name="detail" required placeholder="Contoh: laptop budget 5 juta untuk kuliah, atau instal ulang Windows untuk laptop kantor"></textarea></div>
+        <p class="small muted" style="margin:0">Pemesanan lewat website sementara nonaktif. Silakan pesan atau tanya ketersediaan lewat WhatsApp kami.</p>
+        <button class="btn primary" type="button" onclick="pilihLayanan(document.getElementById('selLayanan').value||'Konsultasi Lainnya')">💬 Pesan lewat WhatsApp</button>
+      </form>
+      <div class="ok-box" id="orderOk">
+        <b>Pemesanan kamu sudah tercatat.</b>
+        <p class="muted small" style="margin:6px 0 12px">Lanjutkan konsultasi dan konfirmasi detail dengan tim kami.</p>
+        <a class="btn wa" id="waLink" href="#" target="_blank" rel="noopener">Lanjut ke WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimoni">
+  <div class="wrap">
+    <h2>Testimoni</h2>
+    <p class="sub">Apa kata klien dan pelanggan Kinastech.</p>
+    <div class="tgrid" id="tlist"><p class="muted">Memuat...</p></div>
+    <div class="card">
+      <h2 style="font-size:22px" id="tformTitle">Tulis Testimoni</h2>
+      <form class="form" onsubmit="saveT(event)">
+        <div class="two">
+          <div><label>Nama</label><input name="nama" required placeholder="Nama kamu"></div>
+          <div><label>Usaha / Kampus</label><input name="usaha" placeholder="Contoh: Toko Kopi Senja"></div>
+        </div>
+        <div class="two">
+          <div><label>Layanan</label><select name="layanan" id="selTLayanan"></select></div>
+          <div><label>Rating</label>
+            <select name="rating"><option value="5">5 ★</option><option value="4">4 ★</option><option value="3">3 ★</option><option value="2">2 ★</option><option value="1">1 ★</option></select>
+          </div>
+        </div>
+        <div><label>Pesan</label><textarea name="pesan" required placeholder="Ceritakan pengalaman kamu"></textarea></div>
+        <div class="row">
+          <button class="btn primary" id="tsubmit">Kirim Testimoni</button>
+          <button type="button" class="btn ghost" id="tcancel" onclick="resetT()" style="display:none">Batal Edit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="kontak">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img data-mascot alt="" style="height:40px;width:auto"><span class="grad-text">Kinastech</span></div>
+      <p class="muted small" style="margin:6px 0 0">Your Digital Partner Solution · Bandung, Indonesia</p>
+    </div>
+    <div class="small">
+      <div>WhatsApp: <a href="https://wa.me/6285171563540" target="_blank" rel="noopener">+62 851-7156-3540</a></div>
+      <div>Instagram: <a href="https://instagram.com/kinastech.solutions" target="_blank" rel="noopener">@kinastech.solutions</a></div>
+      <div style="margin-top:6px"><a href="#admin" class="muted">Login admin</a></div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<section id="admin">
+  <div class="wrap">
+    <div class="row" style="justify-content:space-between;margin-bottom:12px">
+      <div><h2>Admin Kinastech</h2><p class="sub" style="margin:0" id="admMode"></p></div>
+      <div class="row"><a class="btn small" href="#top">← Kembali ke website</a><button class="btn small danger" id="btnLogout" onclick="logout()" style="display:none">Keluar</button></div>
+    </div>
+    <div id="adminBox"></div>
+  </div>
+</section>
+
+<div class="modal" id="menu" onclick="if(event.target===this)closeMenu()">
+  <div class="mcard" id="mcard"></div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ===== KONFIGURASI ===== */
+const CFG={
+  SUPABASE_URL:'cmrrarjzmtyelpwmpwji',            // Project URL Supabase, mis. https://xxxx.supabase.co
+  SUPABASE_ANON_KEY:'sb_publishable_FLYxtJkJJLHQO4rJRVsySQ_elIPuQQ1',       // anon public key Supabase
+  MASCOT_SRC:'maskot_kinastech.png', // saat hosting sendiri, ganti ke 'maskot_kinastech.png'
+  ADMIN_PIN:'kinastech2026',  // hanya dipakai saat database belum dihubungkan
+  WA:'6285171563540'
+};
+const REMOTE=!!(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY);
+const LS={o:'kinastech_orders',t:'kinastech_testi',s:'kinastech_session',e:'kinastech_edu'};
+
+/* ===== DATA LAYANAN ===== */
+const GROUPS=[
+  {id:'laptop',name:'Laptop',ic:'💻',desc:'Laptop second dan peningkatan performa'},
+  {id:'service',name:'Service & Perbaikan',ic:'🔧',desc:'Perbaikan dan pemulihan perangkat'},
+  {id:'office',name:'Jasa Dokumen & Data',ic:'📊',desc:'Pengetikan, presentasi, dan spreadsheet'},
+  {id:'kreatif',name:'Desain & Web',ic:'🎨',desc:'Identitas visual, stiker, dan website'}
+];
+const SERVICES=[
+  {g:'laptop',n:'Laptop Second All In One',ic:'💻',d:'Laptop second siap pakai dengan garansi+, bonus, dan sesuai budget kamu.'},
+  {g:'laptop',n:'Upgrade SSD & RAM',ic:'🚀',d:'Ganti hard disk ke SSD dan tambah RAM agar laptop lama terasa lebih cepat.'},
+  {g:'service',n:'Instal Ulang Windows',ic:'🪟',d:'Instal ulang Windows beserta driver dan software dasar yang kamu butuhkan.'},
+  {g:'service',n:'Recovery Data Storage',ic:'💾',d:'Pemulihan data dari HDD, SSD, atau flash disk yang rusak atau terformat. Hasil tergantung kondisi perangkat.'},
+  {g:'service',n:'Perbaikan Keyboard',ic:'⌨️',d:'Pembersihan atau penggantian keyboard laptop yang tombolnya bermasalah.'},
+  {g:'service',n:'Service Laptop Umum',ic:'🛠️',d:'Pengecekan dan perbaikan umum untuk masalah laptop yang sering kamu alami.'},
+  {g:'office',n:'Jasa Pengetikan Dokumen',ic:'📝',d:'Pengetikan dokumen, skripsi, laporan, atau surat dengan format rapi.'},
+  {g:'office',n:'Pembuatan PPT',ic:'📊',d:'Presentasi PowerPoint yang rapi dan menarik untuk kuliah, kantor, atau bisnis.'},
+  {g:'office',n:'Excel Template & Data',ic:'📈',d:'Template Excel siap pakai dan pengolahan data untuk laporan atau keuangan.'},
+  {g:'kreatif',n:'Design untuk UMKM',ic:'🎨',d:'Logo, banner, katalog produk, dan konten media sosial untuk usaha kamu.'},
+  {g:'kreatif',n:'Pembuatan Stiker',ic:'🏷️',d:'Stiker custom untuk produk, kemasan, brand, atau kebutuhan event.'},
+  {g:'kreatif',n:'Web Development',ic:'🌐',d:'Landing page, company profile, dan toko online yang profesional.'}
+];
+const EDU={
+  laptop:{q:'Mana yang lebih cepat untuk membaca data, HDD atau SSD?',o:['HDD','SSD','Sama saja'],a:1,
+    tip:'SSD tidak punya bagian yang berputar, jadi jauh lebih cepat. Upgrade ke SSD sering membuat laptop lama terasa seperti baru.'},
+  service:{q:'Dalam aturan backup 3-2-1, angka 3 berarti apa?',o:['3 kali backup per tahun','3 salinan data','3 jenis aplikasi'],a:1,
+    tip:'Simpan 3 salinan data di 2 jenis media berbeda, dan 1 salinan di luar lokasi. Ini melindungi data dari kerusakan maupun kehilangan.'},
+  office:{q:'Berapa jumlah poin yang ideal dalam satu slide presentasi?',o:['Sekitar 3 sampai 6 poin','Lebih dari 15 poin','Tidak ada batasan'],a:0,
+    tip:'Aturan 6x6 membantu: maksimal 6 poin per slide dan 6 kata per poin. Audiens lebih mudah fokus pada pesan utama.'},
+  kreatif:{q:'Format logo apa yang paling tajam untuk dicetak stiker?',o:['JPG kecil','PNG 300 px','SVG, AI, atau PDF vektor'],a:2,
+    tip:'Format vektor tetap tajam walau diperbesar, sedangkan JPG dan PNG kecil akan pecah saat dicetak besar.'}
+};
+const SIGNS=[
+  {key:'laptop',x:.14,ic:'💻',label:'Laptop'},
+  {key:'service',x:.38,ic:'🔧',label:'Service'},
+  {key:'office',x:.62,ic:'📊',label:'Dokumen'},
+  {key:'kreatif',x:.86,ic:'🎨',label:'Desain & Web'}
+];
+
+/* ===== UTIL ===== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+const fmt=t=>new Date(t).toLocaleString('id-ID',{dateStyle:'short',timeStyle:'short'});
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}};
+const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast('Penyimpanan penuh')}};
+function toast(msg){const t=$('#toast');t.textContent=msg;t.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(()=>t.style.display='none',3200)}
+document.querySelectorAll('[data-mascot]').forEach(i=>i.src=CFG.MASCOT_SRC);
+$('#waTop').href='https://wa.me/'+CFG.WA;
+
+/* ===== AUDIO (efek suara sintetis, tanpa file tambahan) ===== */
+const SFX={on:load('kinastech_sfx',false),ctx:null};
+function ac(){
+  if(!SFX.ctx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;SFX.ctx=new AC()}
+  if(SFX.ctx.state==='suspended')SFX.ctx.resume();
+  return SFX.ctx;
+}
+function tone(f,d,type,v,delay=0,slide){
+  if(!SFX.on)return;const c=ac();if(!c)return;
+  const t=c.currentTime+delay,o=c.createOscillator(),g=c.createGain();
+  o.type=type;o.frequency.setValueAtTime(f,t);
+  if(slide)o.frequency.exponentialRampToValueAtTime(slide,t+d);
+  g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v,t+0.012);g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+  o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.03);
+}
+const SOUND={
+  click(){tone(760,.06,'triangle',.08);tone(1040,.05,'triangle',.05,.03)},
+  welcome(){[523,659,784,1047].forEach((f,i)=>tone(f,.28,'sine',.12,i*.11))},
+  step(){tone(220+Math.random()*60,.05,'triangle',.04)},
+  jump(){tone(320,.2,'square',.05,0,700)},
+  arrive(){tone(587,.14,'sine',.12);tone(880,.22,'sine',.1,.09)},
+  pick(){tone(660,.1,'triangle',.12);tone(990,.18,'triangle',.12,.07)},
+  correct(){[523,659,784,1047].forEach((f,i)=>tone(f,.2,'triangle',.14,i*.08))},
+  wrong(){tone(260,.25,'sawtooth',.06,0,130)},
+  send(){[784,988,1175].forEach((f,i)=>tone(f,.22,'sine',.12,i*.1))}
+};
+function toggleSfx(){
+  SFX.on=!SFX.on;save('kinastech_sfx',SFX.on);
+  $('#sfxBtn').textContent=SFX.on?'🔊':'🔇';
+  if(SFX.on){ac();SOUND.welcome()}
+}
+
+/* ===== MUSIK LATAR "Kinas Loop" (sintetis, ringan, khas Kinastech) ===== */
+// Identitas musik: tempo 96 BPM, progresi Am9 - Fmaj7 - C6 - G yang hangat,
+// arpeggio pentatonik yang cerah, dan 'blip' digital kecil sebagai ciri khas Kinastech.
+const MUS={on:load('kinastech_music',false),master:null,timer:null,step:0,nextT:0};
+const MBPM=96, STEP=60/MBPM/2;
+const MTONE=m=>440*Math.pow(2,(m-69)/12);
+const PROG=[[57,60,64,67,71],[53,57,60,64,67],[48,52,55,57,62],[55,59,62,65,69]];
+const PAT_A=[0,-1,2,-1,4,2,-1,1];
+const PAT_B=[2,-1,1,-1,3,-1,4,2];
+function mPluck(f,t,v){
+  const c=ac(),o=c.createOscillator(),g=c.createGain();
+  o.type='triangle';o.frequency.value=f;
+  g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v,t+0.01);g.gain.exponentialRampToValueAtTime(0.0001,t+0.7);
+  o.connect(g);g.connect(MUS.master);o.start(t);o.stop(t+0.75);
+}
+function mPad(chord,t,dur){
+  const c=ac();
+  chord.slice(0,4).forEach((m,i)=>{
+    const o=c.createOscillator(),g=c.createGain(),f=c.createBiquadFilter();
+    o.type='sawtooth';o.frequency.value=MTONE(m);o.detune.value=i%2?6:-6;
+    f.type='lowpass';f.frequency.value=900;
+    g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.018,t+0.5);g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o.connect(f);f.connect(g);g.connect(MUS.master);o.start(t);o.stop(t+dur+0.05);
+  });
+}
+function mBass(m,t){
+  const c=ac(),o=c.createOscillator(),g=c.createGain();
+  o.type='sine';o.frequency.value=MTONE(m-24);
+  g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.14,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+0.9);
+  o.connect(g);g.connect(MUS.master);o.start(t);o.stop(t+0.95);
+}
+function mBlip(t){
+  const c=ac(),o=c.createOscillator(),g=c.createGain();
+  o.type='sine';o.frequency.setValueAtTime(2600,t);o.frequency.exponentialRampToValueAtTime(1400,t+0.08);
+  g.gain.setValueAtTime(0.03,t);g.gain.exponentialRampToValueAtTime(0.0001,t+0.09);
+  o.connect(g);g.connect(MUS.master);o.start(t);o.stop(t+0.1);
+}
+function mSchedule(){
+  const c=ac();if(!c||!MUS.master)return;
+  while(MUS.nextT<c.currentTime+0.15){
+    const s=MUS.step,bar=Math.floor(s/8),chord=PROG[bar%4],t=MUS.nextT,pos=s%8;
+    if(pos===0){mPad(chord,t,STEP*8);mBass(chord[0],t)}
+    const pat=(Math.floor(bar/4)%2)?PAT_B:PAT_A;
+    const idx=pat[pos];
+    if(idx>=0)mPluck(MTONE(chord[idx]+12),t,0.09);
+    if(pos===4&&bar%2===1)mBlip(t);
+    MUS.nextT+=STEP;MUS.step=(s+1)%64;
+  }
+}
+function startMusic(){
+  const c=ac();if(!c||MUS.timer)return;
+  MUS.master=c.createGain();MUS.master.gain.value=0.5;MUS.master.connect(c.destination);
+  MUS.nextT=c.currentTime+0.1;MUS.step=0;
+  MUS.timer=setInterval(mSchedule,25);
+}
+function stopMusic(){
+  if(!MUS.timer)return;
+  clearInterval(MUS.timer);MUS.timer=null;
+  const c=ac(),m=MUS.master;
+  m.gain.setTargetAtTime(0,c.currentTime,0.15);
+  setTimeout(()=>m.disconnect(),800);MUS.master=null;
+}
+function toggleMusic(){
+  MUS.on=!MUS.on;save('kinastech_music',MUS.on);
+  $('#musicBtn').style.opacity=MUS.on?1:.5;
+  MUS.on?startMusic():stopMusic();
+}
+
+/* ===== SESSION ===== */
+let session=load(LS.s,null);
+const isAdmin=()=>REMOTE?!!(session&&session.token):!!(session&&session.role==='admin');
+
+/* ===== DATA LAYER: Supabase (jika dikonfigurasi) atau penyimpanan lokal ===== */
+async function rest(method,tbl,body,auth,query=''){
+  const token=(auth&&session&&session.token)||CFG.SUPABASE_ANON_KEY;
+  const r=await fetch(`${CFG.SUPABASE_URL}/rest/v1/${tbl}${query}`,{method,headers:{apikey:CFG.SUPABASE_ANON_KEY,Authorization:'Bearer '+token,'Content-Type':'application/json',Prefer:method==='POST'?'return=minimal':'return=representation'},body:body?JSON.stringify(body):undefined});
+  if(!r.ok)throw new Error('Database: '+(await r.text()).slice(0,160));
+  return method==='GET'?r.json():null;
+}
+function table(name,key){
+  return {
+    async list(auth){
+      if(REMOTE)return rest('GET',name,null,auth,'?select=*&order=created_at.desc');
+      return load(key,[]).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
+    },
+    async add(row){
+      if(REMOTE)return rest('POST',name,row,false);
+      const arr=load(key,[]);arr.push({id:uid(),created_at:new Date().toISOString(),...row});save(key,arr);
+    },
+    async patch(id,patch){
+      if(REMOTE)return rest('PATCH',name,patch,true,'?id=eq.'+id);
+      const arr=load(key,[]);const x=arr.find(r=>r.id===id);if(x)Object.assign(x,patch);save(key,arr);
+    },
+    async del(id){
+      if(REMOTE)return rest('DELETE',name,null,true,'?id=eq.'+id);
+      save(key,load(key,[]).filter(r=>r.id!==id));
+    }
+  };
+}
+const DB={orders:table('orders',LS.o),testi:table('testimonials',LS.t)};
+
+async function login(email,pw){
+  if(REMOTE){
+    const r=await fetch(`${CFG.SUPABASE_URL}/auth/v1/token?grant_type=password`,{method:'POST',headers:{apikey:CFG.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,password:pw})});
+    const j=await r.json();
+    if(!r.ok)throw new Error(j.error_description||j.msg||'Login gagal');
+    session={token:j.access_token,email};
+  }else{
+    if(pw!==CFG.ADMIN_PIN)throw new Error('PIN salah');
+    session={role:'admin'};
+  }
+  save(LS.s,session);
+}
+function logout(){session=null;localStorage.removeItem(LS.s);renderAdmin();renderT();toast('Anda sudah keluar')}
+
+/* ===== KATALOG LAPTOP (Pricelist Kinastech November 2026) ===== */
+const ORDER_OPEN=true; // ubah ke true untuk mengaktifkan pemesanan lewat website (setelah database terhubung)
+const waUrl=msg=>`https://wa.me/${CFG.WA}?text=${encodeURIComponent(msg)}`;
+const rp=n=>'Rp '+Number(n||0).toLocaleString('id-ID');
+const RECO={
+  coding:{name:'Coding',ic:'👨‍💻',jur:'Informatika, Sistem Informasi, Teknik'},
+  editing:{name:'Editing',ic:'🎬',jur:'DKV, Multimedia, Arsitektur, Film'},
+  admin:{name:'Administrasi',ic:'📑',jur:'Ekonomi, Hukum, Pendidikan, kuliah umum'}
+};
+const UNITS=[
+  {id:1,m:'DELL',n:'Latitude 3390 2-in-1',cpu:'Intel i5 Gen 8',ram:8,ssd:256,t:1,gpu:0,p:5160000,r:['admin']},
+  {id:2,m:'DELL',n:'Latitude 5400',cpu:'Intel i5 Gen 8',ram:8,ssd:256,t:0,gpu:0,p:4560000,r:['admin']},
+  {id:3,m:'DELL',n:'Latitude 7390',cpu:'Intel i5 Gen 7',ram:8,ssd:256,t:0,gpu:0,p:4440000,r:['admin']},
+  {id:4,m:'DELL',n:'Latitude 7390 Touchscreen',cpu:'Intel i5 Gen 8',ram:8,ssd:256,t:1,gpu:0,p:4920000,r:['admin']},
+  {id:5,m:'DELL',n:'Latitude 7390',cpu:'Intel i5 Gen 8',ram:8,ssd:256,t:0,gpu:0,p:4680000,r:['admin']},
+  {id:6,m:'HP',n:'EliteBook 840 G6 Touchscreen',cpu:'Intel i7 Gen 8',ram:16,ssd:256,t:1,gpu:0,p:6360000,r:['coding','editing']},
+  {id:7,m:'HP',n:'EliteBook 840 G8',cpu:'Intel i5 Gen 11',ram:16,ssd:256,t:0,gpu:0,p:7200000,r:['coding','admin']},
+  {id:8,m:'HP',n:'EliteBook 840 G8',cpu:'Intel i5 Gen 11',ram:8,ssd:256,t:0,gpu:0,p:6720000,r:['admin']},
+  {id:9,m:'HP',n:'EliteBook 845 G7',cpu:'AMD Ryzen 7 PRO 4750U',ram:8,ssd:256,t:0,gpu:0,p:7080000,r:['admin','coding']},
+  {id:10,m:'HP',n:'EliteBook 845 G8',cpu:'AMD Ryzen 7 PRO 5850U',ram:8,ssd:256,t:0,gpu:0,p:7800000,r:['coding','editing']},
+  {id:11,m:'HP',n:'EliteBook 845 G9 Touchscreen',cpu:'AMD Ryzen 7 PRO 6850U',ram:8,ssd:256,t:1,gpu:0,p:9240000,r:['coding','editing']},
+  {id:12,m:'HP',n:'EliteBook 845 G9 Touchscreen',cpu:'AMD Ryzen 7 PRO 6850U',ram:8,ssd:512,t:1,gpu:0,p:10200000,r:['coding','editing']},
+  {id:13,m:'HP',n:'ProBook 445 G8',cpu:'AMD Ryzen 5 5600U',ram:8,ssd:256,t:0,gpu:0,p:6300000,r:['admin','coding']},
+  {id:14,m:'LENOVO',n:'ThinkPad L14 G2',cpu:'AMD Ryzen 5 PRO 5650U',ram:16,ssd:256,t:0,gpu:0,p:6720000,r:['coding','admin']},
+  {id:15,m:'LENOVO',n:'ThinkPad P1 G4 (NVIDIA RTX A2000)',cpu:'Intel i7 Gen 11',ram:16,ssd:256,t:0,gpu:1,p:14400000,r:['editing','coding']},
+  {id:16,m:'LENOVO',n:'ThinkPad T14 G1 Touchscreen',cpu:'Intel i7 Gen 10',ram:16,ssd:512,t:1,gpu:0,p:7440000,r:['coding','editing']},
+  {id:17,m:'LENOVO',n:'ThinkPad T14 G2',cpu:'Intel i7 Gen 11',ram:16,ssd:256,t:0,gpu:0,p:8040000,r:['coding','admin']},
+  {id:18,m:'LENOVO',n:'ThinkPad T14 G3',cpu:'Intel i5 Gen 11',ram:16,ssd:256,t:0,gpu:0,p:8400000,r:['coding','admin']},
+  {id:19,m:'LENOVO',n:'ThinkPad T470P (GeForce 940MX)',cpu:'Intel i7 Gen 7',ram:8,ssd:256,t:0,gpu:1,p:5040000,r:['editing','admin']},
+  {id:20,m:'LENOVO',n:'ThinkPad T480 (GeForce MX150)',cpu:'Intel i7 Gen 8',ram:8,ssd:256,t:0,gpu:1,p:5760000,r:['editing','admin']},
+  {id:21,m:'LENOVO',n:'ThinkPad X1 Carbon 10th Touchscreen',cpu:'Intel i7 Gen 12',ram:32,ssd:512,t:1,gpu:0,p:16200000,r:['coding','editing']},
+  {id:22,m:'LENOVO',n:'ThinkPad X13 G1 Touchscreen',cpu:'Intel i5 Gen 10',ram:16,ssd:256,t:1,gpu:0,p:5880000,r:['coding','admin']},
+  {id:23,m:'LENOVO',n:'ThinkPad X13 G3',cpu:'Intel i5 Gen 12',ram:16,ssd:256,t:0,gpu:0,p:8400000,r:['coding','admin']},
+  {id:24,m:'LENOVO',n:'ThinkPad X270',cpu:'Intel i5 Gen 6',ram:8,ssd:256,t:0,gpu:0,p:3960000,r:['admin']},
+  {id:25,m:'LENOVO',n:'ThinkPad X390',cpu:'Intel i5 Gen 8',ram:16,ssd:256,t:0,gpu:0,p:5040000,r:['coding','admin']},
+  {id:26,m:'TOSHIBA',n:'Dynabook G83',cpu:'Intel i5 Gen 11',ram:8,ssd:256,t:0,gpu:0,p:5160000,r:['admin']}
+];
+let CAT={use:'all'};
+function reasonOf(u){
+  const out=[];
+  if(u.r.includes('coding'))out.push(u.ram>=16?'Lancar untuk coding dan multitasking IDE, browser, serta virtual environment.':'Cukup untuk belajar coding. Tambah RAM bila project mulai berat.');
+  if(u.r.includes('editing'))out.push(u.gpu||u.ram>=16?'Kuat untuk edit foto dan video, GPU membantu proses render.':'Cocok untuk edit foto dan video ringan.');
+  if(u.r.includes('admin'))out.push('Ringan untuk Word, Excel, PowerPoint, browsing, dan kuliah daring.');
+  return out.slice(0,2).join(' ');
+}
+function unitCard(u){
+  return `<article class="ucard">
+    <div class="uhead"><span class="ubrand">${esc(u.m)}</span>${u.t?'<span class="utag">Touchscreen</span>':''}${u.gpu?'<span class="utag">GPU Dedicated</span>':''}</div>
+    <h3>${esc(u.n)}</h3>
+    <div class="uspec"><span>⚙️ ${esc(u.cpu)}</span><span>🧠 RAM ${u.ram} GB</span><span>💽 SSD ${u.ssd} GB</span><span>🔋 Baterai 2–3 jam*</span></div>
+    <div class="uprice">${rp(u.p)}</div>
+    <div class="urec">${u.r.map(r=>`<span class="rbadge">${RECO[r].ic} ${RECO[r].name}</span>`).join('')}</div>
+    <p class="ureason">${esc(reasonOf(u))}</p>
+    <p class="small muted" style="margin:0">Jurusan: ${esc(u.r.map(r=>RECO[r].jur).join(' · '))}</p>
+    <div class="ubtns">
+      <button class="btn small wa" onclick="askStock(${u.id})">💬 Tanya ketersediaan</button>
+      <button class="btn small" onclick="orderUnit(${u.id})">Pesan</button>
+    </div>
+  </article>`;
+}
+function renderCatalog(){
+  const sel=$('#cb');
+  if(sel.options.length<=1){
+    const brands=[...new Set(UNITS.map(u=>u.m))].sort();
+    sel.insertAdjacentHTML('beforeend',brands.map(b=>`<option>${b}</option>`).join(''));
+  }
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.use===CAT.use));
+  const q=$('#cq').value.toLowerCase(),b=sel.value,max=+$('#cmax').value||Infinity,srt=$('#cs').value;
+  const list=UNITS.filter(u=>(CAT.use==='all'||u.r.includes(CAT.use))&&(!b||u.m===b)&&u.p<=max&&(u.m+' '+u.n+' '+u.cpu).toLowerCase().includes(q));
+  list.sort((x,y)=>srt==='asc'?x.p-y.p:srt==='desc'?y.p-x.p:(y.ram-x.ram)||(x.p-y.p));
+  $('#ugrid').innerHTML=list.map(unitCard).join('')||'<p class="muted">Tidak ada unit sesuai filter.</p>';
+  $('#ccount').textContent=`Menampilkan ${list.length} dari ${UNITS.length} unit`;
+}
+function setUse(u){CAT.use=u;renderCatalog()}
+function askStock(id){
+  const u=UNITS.find(x=>x.id===id);if(!u)return;
+  const msg=`Halo Kinastech 👋\n\nSaya ingin menanyakan ketersediaan unit:\n${u.m} ${u.n}\nProcessor: ${u.cpu}\nRAM ${u.ram} GB · SSD ${u.ssd} GB\nHarga: ${rp(u.p)}\n\nApakah unit ini masih tersedia? Terima kasih.`;
+  showWA(`https://wa.me/${CFG.WA}?text=${encodeURIComponent(msg)}`);
+}
+/* tombol WhatsApp: pakai link biasa yang dibuka pengunjung sendiri (tidak lewat window.open) */
+function showWA(url){
+  let p=$('#waPanel');
+  if(!p){p=document.createElement('div');p.id='waPanel';p.style.cssText='position:fixed;right:16px;bottom:16px;z-index:50;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.2);max-width:300px;display:grid;gap:8px';document.body.appendChild(p)}
+  p.innerHTML=`<b>Tanya ketersediaan</b><div class="small muted">Tekan tombol di bawah untuk membuka WhatsApp kami. Jika tidak terbuka, salin nomornya lalu buka WhatsApp secara manual.</div><a class="btn wa small" href="${url}" target="_blank" rel="noopener" style="text-decoration:none">💬 Buka WhatsApp</a><button class="btn small" onclick="copyNo()">Salin nomor 0851-7156-3540</button><button class="btn small ghost" onclick="$('#waPanel').remove()">Tutup</button>`;
+}
+function copyNo(){
+  const txt='085171563540';
+  const done=()=>toast('Nomor disalin: '+txt);
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>toast('Nomor: '+txt))}
+  else toast('Nomor: '+txt);
+}
+
+function orderUnit(id){
+  const u=UNITS.find(x=>x.id===id);if(!u)return;
+  if(!ORDER_OPEN){showWA(waUrl(`Halo Kinastech 👋\n\nSaya tertarik unit ${u.m} ${u.n} (${u.cpu}, RAM ${u.ram} GB, SSD ${u.ssd} GB) seharga ${rp(u.p)}. Mohon info ketersediaan dan pemesanan.`));return}
+  document.querySelector('#pesan textarea[name=detail]').value=`Saya tertarik unit ${u.m} ${u.n} (${u.cpu}, RAM ${u.ram} GB, SSD ${u.ssd} GB) seharga ${rp(u.p)}.`;
+  pilihLayanan('Laptop Second');
+}
+
+/* ===== RENDER LAYANAN & FORM ===== */
+function renderServices(){
+  $('#svcList').innerHTML=GROUPS.map(g=>`
+    <div class="group-title">${g.ic} ${g.name}</div>
+    <div class="services">${SERVICES.filter(s=>s.g===g.id).map(s=>`
+      <div class="card svc">
+        <div class="ic">${s.ic}</div>
+        <h3>${esc(s.n)}</h3>
+        <p>${esc(s.d)}</p>
+        <button class="btn small" onclick="pilihLayanan('${esc(s.n)}')">Pesan</button>
+      </div>`).join('')}</div>`).join('');
+  const opts=GROUPS.map(g=>`<optgroup label="${esc(g.name)}">${SERVICES.filter(s=>s.g===g.id).map(s=>`<option>${esc(s.n)}</option>`).join('')}</optgroup>`).join('');
+  $('#selLayanan').innerHTML=`<option value="">Pilih layanan</option>${opts}<option>Konsultasi Lainnya</option>`;
+  $('#selTLayanan').innerHTML=`${SERVICES.map(s=>`<option>${esc(s.n)}</option>`).join('')}<option>Lainnya</option>`;
+}
+function pilihLayanan(nama){
+  if(!ORDER_OPEN){closeMenu();showWA(waUrl(`Halo Kinastech 👋\n\nSaya ingin konsultasi layanan: ${nama}. Mohon info lebih lanjut.`));return}
+  SOUND.pick();
+  const s=$('#selLayanan');
+  [...s.options].forEach(o=>{if(o.value===nama)s.value=nama});
+  closeMenu();
+  $('#pesan').scrollIntoView({behavior:'smooth'});
+}
+
+/* ===== PESANAN ===== */
+async function submitOrder(e){
+  if(!ORDER_OPEN){e.preventDefault();return toast('Pemesanan sementara nonaktif, silakan hubungi WhatsApp kami')}
+  e.preventDefault();
+  const f=e.target;const d=Object.fromEntries(new FormData(f));
+  const hp=d.hp.replace(/\D/g,'');
+  if(hp.length<9)return toast('Nomor WhatsApp tidak valid');
+  try{
+    await DB.orders.add({nama:d.nama.trim(),hp,layanan:d.layanan,detail:d.detail.trim(),status:'Baru'});
+  }catch(err){return toast('Gagal menyimpan pesanan: '+err.message)}
+  const msg=`Halo Kinastech 👋\n\nSaya ${d.nama} (${hp}) baru saja memesan lewat website.\n\nLayanan: ${d.layanan}\nDetail: ${d.detail}\n\nMohon info lebih lanjut. Terima kasih!`;
+  const url=`https://wa.me/${CFG.WA}?text=${encodeURIComponent(msg)}`;
+  $('#waLink').href=url;$('#orderOk').style.display='block';
+  f.reset();
+  SOUND.send();toast('Pemesanan tercatat. Lanjutkan di WhatsApp.');
+}
+
+/* ===== TESTIMONI ===== */
+async function renderT(){
+  const box=$('#tlist');
+  try{
+    const list=await DB.testi.list(false);
+    box.innerHTML=list.length?list.map(t=>`
+      <article class="card tc">
+        <div class="stars">${'★'.repeat(t.rating)}${'☆'.repeat(5-t.rating)}</div>
+        <p>"${esc(t.pesan)}"</p>
+        <div><b>${esc(t.nama)}</b><div class="muted small">${esc(t.usaha||'')}${t.usaha?' · ':''}${esc(t.layanan)}</div></div>
+        ${isAdmin()?`<div class="row"><button class="btn small" onclick="editT('${t.id}')">Edit</button><button class="btn small danger" onclick="delT('${t.id}')">Hapus</button></div>`:''}
+      </article>`).join(''):'<p class="muted">Belum ada testimoni. Jadilah yang pertama menulis!</p>';
+  }catch(err){box.innerHTML=`<p class="t-danger">Gagal memuat testimoni: ${esc(err.message)}</p>`}
+}
+let editId=null;
+async function saveT(e){
+  e.preventDefault();
+  const d=Object.fromEntries(new FormData(e.target));
+  const data={nama:d.nama.trim(),usaha:(d.usaha||'').trim(),layanan:d.layanan,rating:+d.rating,pesan:d.pesan.trim()};
+  try{
+    if(editId){
+      if(!isAdmin())return toast('Hanya admin yang bisa mengedit');
+      await DB.testi.patch(editId,data);toast('Testimoni diperbarui');
+    }else{
+      await DB.testi.add(data);SOUND.send();toast('Terima kasih atas testimoninya!');
+    }
+  }catch(err){return toast('Gagal: '+err.message)}
+  resetT();renderT();
+}
+async function editT(id){
+  const list=await DB.testi.list(true);const t=list.find(x=>x.id===id);if(!t)return;
+  editId=id;
+  const f=document.querySelector('#testimoni form').elements;
+  f.nama.value=t.nama;f.usaha.value=t.usaha||'';f.layanan.value=t.layanan;f.rating.value=t.rating;f.pesan.value=t.pesan;
+  $('#tformTitle').textContent='Edit Testimoni';$('#tsubmit').textContent='Simpan Perubahan';$('#tcancel').style.display='inline-flex';
+  $('#testimoni').scrollIntoView({behavior:'smooth'});
+}
+function resetT(){
+  editId=null;document.querySelector('#testimoni form').reset();
+  $('#tformTitle').textContent='Tulis Testimoni';$('#tsubmit').textContent='Kirim Testimoni';$('#tcancel').style.display='none';
+}
+async function delT(id){
+  if(!isAdmin())return toast('Hanya admin yang bisa menghapus');
+  if(!confirm('Hapus testimoni ini?'))return;
+  try{await DB.testi.del(id);toast('Testimoni dihapus');if(editId===id)resetT();renderT();renderAdmin()}
+  catch(err){toast('Gagal: '+err.message)}
+}
+
+/* ===== ADMIN ===== */
+const STATUS=['Baru','Diproses','Selesai','Batal'];
+let adminOrders=[];
+async function renderAdmin(){
+  $('#btnLogout').style.display=isAdmin()?'inline-flex':'none';
+  $('#admMode').textContent=REMOTE?'Terhubung ke database Supabase':'Mode lokal (database belum dihubungkan)';
+  const box=$('#adminBox');
+  if(!isAdmin()){
+    box.innerHTML=`<div class="card" style="max-width:420px"><h3 style="margin-top:0">Masuk admin</h3>
+      <form class="form" onsubmit="doLogin(event)">
+        ${REMOTE?'<input name="email" type="email" placeholder="Email admin" required>':''}
+        <input name="pw" type="password" placeholder="${REMOTE?'Password':'PIN admin'}" required>
+        <button class="btn primary">Masuk</button>
+      </form></div>`;
+    return;
+  }
+  box.innerHTML='<p class="muted">Memuat data...</p>';
+  try{
+    const [orders,testi]=await Promise.all([DB.orders.list(true),DB.testi.list(true)]);
+    adminOrders=orders;
+    box.innerHTML=`
+    <div class="card" style="margin-bottom:16px">
+      <div class="row" style="justify-content:space-between;margin-bottom:10px">
+        <h3 style="margin:0">Pesanan (${orders.length})</h3>
+        <button class="btn small" onclick="exportCSV()">Unduh CSV</button>
+      </div>
+      <div class="tbl-wrap"><table>
+        <tr><th>Waktu</th><th>Nama</th><th>WhatsApp</th><th>Layanan</th><th>Detail</th><th>Status</th><th></th></tr>
+        ${orders.map(o=>`<tr>
+          <td class="small">${o.created_at?fmt(o.created_at):'-'}</td>
+          <td>${esc(o.nama)}</td>
+          <td><a href="https://wa.me/${esc(o.hp)}" target="_blank" rel="noopener">${esc(o.hp)}</a></td>
+          <td>${esc(o.layanan)}</td>
+          <td class="small" style="max-width:260px">${esc(o.detail)}</td>
+          <td><select class="st" onchange="setStatus('${o.id}',this.value)">${STATUS.map(s=>`<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select></td>
+          <td><button class="btn small danger" onclick="delOrder('${o.id}')">Hapus</button></td>
+        </tr>`).join('')||'<tr><td colspan="7" class="muted">Belum ada pesanan</td></tr>'}
+      </table></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Testimoni (${testi.length})</h3>
+      <div class="tbl-wrap"><table>
+        <tr><th>Nama</th><th>Usaha</th><th>Layanan</th><th>Rating</th><th>Pesan</th><th></th></tr>
+        ${testi.map(t=>`<tr>
+          <td>${esc(t.nama)}</td><td>${esc(t.usaha||'')}</td><td>${esc(t.layanan)}</td><td>${t.rating}★</td>
+          <td class="small" style="max-width:280px">${esc(t.pesan)}</td>
+          <td class="row"><button class="btn small" onclick="location.hash='';document.body.classList.remove('show-admin');editT('${t.id}')">Edit</button><button class="btn small danger" onclick="delT('${t.id}')">Hapus</button></td>
+        </tr>`).join('')||'<tr><td colspan="6" class="muted">Belum ada testimoni</td></tr>'}
+      </table></div>
+    </div>`;
+  }catch(err){box.innerHTML=`<p class="t-danger">Gagal memuat data: ${esc(err.message)}</p>`}
+}
+async function doLogin(e){
+  e.preventDefault();const f=e.target;
+  try{await login(REMOTE?f.email.value.trim():'',f.pw.value);toast('Login admin berhasil');renderAdmin();renderT()}
+  catch(err){toast(err.message)}
+}
+async function setStatus(id,status){
+  try{await DB.orders.patch(id,{status});toast('Status diperbarui')}catch(err){toast('Gagal: '+err.message)}
+}
+async function delOrder(id){
+  if(!confirm('Hapus pesanan ini?'))return;
+  try{await DB.orders.del(id);renderAdmin()}catch(err){toast('Gagal: '+err.message)}
+}
+function exportCSV(){
+  const rows=[['Waktu','Nama','WhatsApp','Layanan','Detail','Status']].concat(adminOrders.map(o=>[o.created_at,o.nama,o.hp,o.layanan,o.detail,o.status]));
+  const csv=rows.map(r=>r.map(c=>`"${String(c??'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='pesanan-kinastech.csv';a.click();
+}
+function routeAdmin(){
+  const on=location.hash==='#admin';
+  document.body.classList.toggle('show-admin',on);
+  if(on)renderAdmin();
+}
+window.addEventListener('hashchange',routeAdmin);
+
+/* ===== GAME ===== */
+const cv=$('#game'),ctx=cv.getContext('2d');
+const mascot=new Image();mascot.src=CFG.MASCOT_SRC;
+const keys={l:false,r:false};
+const G={x:0,y:0,vy:0,dir:1,target:null,onGround:true,near:null,init:false,walk:0};
+let W=600,H=320,DPR=1,inView=true,T=0;
+let C={bg:'#f7f9fc',card:'#ffffff',line:'#e3e8f1',text:'#1b2433',muted:'#64708a'};
+let particles=[];
+let edu=load(LS.e,[]);
+
+function readTheme(){
+  const cs=getComputedStyle(document.documentElement);
+  C.bg=cs.getPropertyValue('--bg').trim()||C.bg;
+  C.card=cs.getPropertyValue('--card').trim()||C.card;
+  C.line=cs.getPropertyValue('--line').trim()||C.line;
+  C.text=cs.getPropertyValue('--text').trim()||C.text;
+  C.muted=cs.getPropertyValue('--muted').trim()||C.muted;
+}
+function size(){
+  readTheme();
+  const w=cv.parentElement.getBoundingClientRect().width;
+  W=Math.max(300,Math.round(w));
+  H=Math.round(Math.max(280,Math.min(380,W*0.52)));
+  DPR=window.devicePixelRatio||1;
+  cv.width=W*DPR;cv.height=H*DPR;cv.style.height=H+'px';
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  if(!G.init){G.x=W*.06;G.init=true}
+  G.y=groundY();
+  if(!particles.length)for(let i=0;i<14;i++)particles.push({x:Math.random(),y:Math.random(),s:1+Math.random()*2,v:.1+Math.random()*.3,c:i%2?'#4cc98a':'#3b5bd9'});
+}
+const groundY=()=>H-40;
+const signW=()=>Math.min(118,W*0.2);
+const signTop=()=>H-40-82-56;
+
+function step(){
+  const sp=Math.max(2.4,W/270);
+  let mv=0;
+  if(keys.l)mv-=1;
+  if(keys.r)mv+=1;
+  if(G.target!=null&&!mv){
+    const d=G.target-G.x;
+    if(Math.abs(d)<sp){G.target=null}else mv=Math.sign(d);
+  }
+  if(mv){G.x+=mv*sp;G.dir=mv;G.walk+=0.25;if(G.onGround&&Math.floor(G.walk/2)!==Math.floor((G.walk-0.25)/2))SOUND.step()}
+  G.x=Math.max(30,Math.min(W-30,G.x));
+  G.vy+=0.6;G.y+=G.vy;
+  if(G.y>=groundY()){G.y=groundY();G.vy=0;G.onGround=true}
+
+  let nearKey=null;
+  SIGNS.forEach(s=>{if(Math.abs(G.x-s.x*W)<signW()*0.45&&G.onGround)nearKey=s.key});
+  if(nearKey!==G.near){
+    G.near=nearKey;
+    if(nearKey&&$('#menu').style.display!=='flex')openMenu(nearKey);
+  }
+}
+
+function rr(x,y,w,h,r){ctx.beginPath();if(ctx.roundRect)ctx.roundRect(x,y,w,h,r);else ctx.rect(x,y,w,h)}
+
+function draw(){
+  T+=1;
+  // latar belakang selaras dengan halaman utama
+  const bg=ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,C.bg);bg.addColorStop(1,C.card);
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  // pola titik halus
+  ctx.fillStyle=C.line;ctx.globalAlpha=.55;
+  for(let x=12;x<W;x+=26)for(let y=12;y<H-60;y+=26){ctx.beginPath();ctx.arc(x,y,1.1,0,6.283);ctx.fill()}
+  ctx.globalAlpha=1;
+  // partikel kecil
+  particles.forEach(p=>{
+    p.y-=p.v/H*0.6;if(p.y<0)p.y=1;
+    ctx.globalAlpha=.35;ctx.fillStyle=p.c;
+    ctx.beginPath();ctx.arc(p.x*W,p.y*H,p.s,0,6.283);ctx.fill();
+  });
+  ctx.globalAlpha=1;
+  // awan bergerak
+  [[.18,.14,1],[.6,.1,.8],[.9,.22,1.2]].forEach((c,i)=>{
+    const x=((c[0]*W+T*0.08*c[2])%(W+160))-80, y=c[1]*H;
+    ctx.fillStyle=C.card;ctx.globalAlpha=.9;
+    ctx.beginPath();ctx.arc(x,y,16*c[2],0,6.283);ctx.arc(x+18,y-8,20*c[2],0,6.283);ctx.arc(x+38,y,15*c[2],0,6.283);ctx.fill();
+    ctx.globalAlpha=1;
+  });
+  // bukit
+  ctx.fillStyle=C.line;ctx.globalAlpha=.6;
+  ctx.beginPath();ctx.moveTo(0,H-40);
+  for(let x=0;x<=W;x+=20)ctx.lineTo(x,H-40-18-Math.sin(x/90)*10);
+  ctx.lineTo(W,H-40);ctx.fill();ctx.globalAlpha=1;
+  // tanah + garis gradien brand
+  ctx.fillStyle=C.card;ctx.fillRect(0,H-40,W,40);
+  const gl=ctx.createLinearGradient(0,0,W,0);gl.addColorStop(0,'#4cc98a');gl.addColorStop(1,'#3b5bd9');
+  ctx.fillStyle=gl;ctx.fillRect(0,H-40,W,3);
+
+  // papan layanan
+  const sw=signW(),sh=82,top=signTop();
+  SIGNS.forEach(s=>{
+    const x=s.x*W;const near=G.near===s.key;
+    ctx.fillStyle=C.muted;ctx.globalAlpha=.6;ctx.fillRect(x-3,top+sh,6,H-40-(top+sh));ctx.globalAlpha=1;
+    if(near){ctx.shadowColor='#4cc98a';ctx.shadowBlur=22}
+    rr(x-sw/2,top,sw,sh,14);
+    ctx.fillStyle=C.card;ctx.fill();
+    ctx.shadowBlur=0;
+    ctx.lineWidth=near?3:2;ctx.strokeStyle=near?'#4cc98a':C.line;ctx.stroke();
+    // strip gradien atas
+    ctx.save();rr(x-sw/2,top,sw,8,4);ctx.clip();
+    const sg=ctx.createLinearGradient(x-sw/2,0,x+sw/2,0);sg.addColorStop(0,'#4cc98a');sg.addColorStop(1,'#3b5bd9');
+    ctx.fillStyle=sg;ctx.fillRect(x-sw/2,top,sw,8);ctx.restore();
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.font=`${Math.round(sw*0.2)}px sans-serif`;ctx.fillStyle=C.text;
+    ctx.fillText(s.ic,x,top+sh*0.44);
+    ctx.font=`bold ${Math.max(10,Math.round(sw*0.1))}px sans-serif`;
+    ctx.fillStyle=C.text;ctx.fillText(s.label,x,top+sh*0.82,sw-10);
+  });
+
+  // maskot dengan animasi jalan dan napas
+  const gh=H*0.5;
+  const bob=G.onGround?(G.walk!==0&&Math.abs(G.target!=null||keys.l||keys.r)?Math.abs(Math.sin(G.walk))*3:Math.sin(T*0.05)*1.5):0;
+  // bayangan
+  ctx.fillStyle='rgba(20,30,60,.16)';
+  ctx.beginPath();ctx.ellipse(G.x,G.y+2,gh*0.28,6,0,0,6.283);ctx.fill();
+  if(mascot.complete&&mascot.naturalWidth){
+    const gw=gh*mascot.naturalWidth/mascot.naturalHeight;
+    ctx.drawImage(mascot,G.x-gw/2,G.y-gh-bob,gw,gh);
+  }else{
+    ctx.font=`${Math.round(gh*0.8)}px serif`;ctx.textAlign='center';ctx.textBaseline='alphabetic';
+    ctx.fillText('🦎',G.x,G.y-bob);
+  }
+  // indikator interaksi
+  if(G.near){
+    const s=SIGNS.find(x=>x.key===G.near);
+    ctx.font='600 13px sans-serif';ctx.textAlign='center';ctx.fillStyle=C.text;
+    ctx.fillText('Belajar & pilih layanan: '+s.label,W/2,22);
+  }
+}
+function loop(){if(inView){step();draw()}requestAnimationFrame(loop)}
+
+/* ===== MENU: EDUKASI + QUIZ + PILIH LAYANAN ===== */
+let QZ=null;
+function openMenu(key){SOUND.arrive();
+  const s=SIGNS.find(x=>x.key===key), e=EDU[key], grp=GROUPS.find(g=>g.id===key);
+  const list=SERVICES.filter(x=>x.g===key);
+  QZ={key,done:edu.includes(key)};
+  $('#mcard').innerHTML=`
+    <div class="mhead"><div class="ic">${s.ic}</div><div><h3 style="margin:0">${esc(grp.name)}</h3><div class="muted small">${esc(grp.desc)}</div></div></div>
+    <div class="tip"><b>💡 Tahukah kamu?</b><br>${esc(e.tip)}</div>
+    <div>
+      <div class="quiz-q">${esc(e.q)}</div>
+      <div class="quiz-opts" id="qOpts">${e.o.map((o,i)=>`<button onclick="answer(${i})">${esc(o)}</button>`).join('')}</div>
+      <div class="muted small" id="qRes" style="margin-top:6px">${QZ.done?'✅ Sudah kamu jawab. Silakan pilih layanan di bawah.':'Jawab dulu untuk menambah edukasi kamu.'}</div>
+    </div>
+    <div><b>Pilih layanan:</b>
+      <div class="svc-pick" style="margin-top:8px">${list.map(x=>`<button class="btn small" style="justify-content:space-between" onclick="pilihLayanan('${esc(x.n)}')"><span>${x.ic} ${esc(x.n)}</span><span>→</span></button>`).join('')}</div>
+    </div>
+    <button class="btn ghost" onclick="closeMenu()">Tutup</button>`;
+  $('#menu').style.display='flex';
+}
+function answer(i){
+  const e=EDU[QZ.key];
+  const btns=[...document.querySelectorAll('#qOpts button')];
+  btns.forEach((b,j)=>{b.disabled=true;if(j===e.a)b.classList.add('right');else if(j===i)b.classList.add('wrong')});
+  if(i===e.a){
+    if(!edu.includes(QZ.key)){edu.push(QZ.key);save(LS.e,edu);updateEduBar()}
+    SOUND.correct();$('#qRes').textContent='🎉 Benar! Edukasi kamu bertambah. Silakan pilih layanan.';
+  }else{
+    SOUND.wrong();$('#qRes').textContent='Hampir benar. Jawaban yang tepat sudah ditandai hijau, dan kamu tetap bisa memilih layanan.';
+  }
+}
+function closeMenu(){$('#menu').style.display='none'}
+function updateEduBar(){
+  const n=edu.length;
+  $('#eduFill').style.width=(n/4*100)+'%';
+  $('#eduTxt').textContent=n+'/4';
+}
+
+/* input keyboard */
+window.addEventListener('keydown',e=>{
+  if($('#menu').style.display==='flex'){if(e.key==='Escape')closeMenu();return}
+  if(!inView)return;
+  const k=e.key;
+  if(['ArrowLeft','ArrowRight','ArrowUp',' '].includes(k))e.preventDefault();
+  if(k==='ArrowLeft'||k==='a'||k==='A')keys.l=true;
+  if(k==='ArrowRight'||k==='d'||k==='D')keys.r=true;
+  if((k==='ArrowUp'||k===' '||k==='w'||k==='W')&&G.onGround){G.vy=-Math.max(11,H*0.036);G.onGround=false;SOUND.jump()}
+});
+window.addEventListener('keyup',e=>{
+  const k=e.key;
+  if(k==='ArrowLeft'||k==='a'||k==='A')keys.l=false;
+  if(k==='ArrowRight'||k==='d'||k==='D')keys.r=false;
+});
+function holdBtn(sel,down,up){
+  const b=$(sel);
+  b.addEventListener('pointerdown',e=>{e.preventDefault();down()});
+  ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,up));
+}
+holdBtn('#bL',()=>keys.l=true,()=>keys.l=false);
+holdBtn('#bR',()=>keys.r=true,()=>keys.r=false);
+$('#bJ').addEventListener('click',()=>{if(G.onGround){G.vy=-Math.max(11,H*0.036);G.onGround=false;SOUND.jump()}});
+cv.addEventListener('pointerdown',e=>{
+  const r=cv.getBoundingClientRect();
+  G.target=e.clientX-r.left;
+});
+
+new IntersectionObserver(en=>{inView=en[0].isIntersecting}).observe(cv);
+window.addEventListener('resize',size);
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',readTheme);
+size();
+loop();
+
+/* ===== INIT ===== */
+$('#sfxBtn').textContent=SFX.on?'🔊':'🔇';
+$('#sfxBtn').onclick=toggleSfx;
+$('#musicBtn').onclick=toggleMusic;
+$('#musicBtn').style.opacity=MUS.on?1:.5;
+if(MUS.on)document.addEventListener('pointerdown',startMusic,{once:true});
+document.addEventListener('click',e=>{if(e.target.closest('button,.btn')&&!e.target.closest('#qOpts,#sfxBtn'))SOUND.click()},true);
+renderServices();renderCatalog();
+if(REMOTE){
+  rest('GET','testimonials',null,false,'?select=id&limit=1')
+    .then(()=>console.log('✅ Supabase terhubung. Data pesanan & testimoni akan tersimpan di database.'))
+    .catch(e=>console.error('❌ Supabase belum terhubung:',e.message));
+}else{
+  console.log('ℹ️ Mode lokal: isi SUPABASE_URL dan SUPABASE_ANON_KEY di CFG untuk menghubungkan database.');
+}
+updateEduBar();
+renderT();
+routeAdmin();
+</script>
+</body>
+</html>
